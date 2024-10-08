@@ -77,11 +77,11 @@
 
             <!-- Availability Status -->
             <td class="text-right text-white">
-              <p class="font-semibold">Available</p>
+              <p class="font-semibold text-left">Available</p>
             </td>
 
             <!-- Details Arrow -->
-            <td class="text-right">
+            <td class="text-center">
               <a href="#" class="text-gray-400 hover:text-white transition duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -116,11 +116,11 @@
 
               <!-- Availability Status -->
               <td class="text-right text-white">
-                <p class="font-semibold">Available</p>
+                <p class="font-semibold text-left">Available</p>
               </td>
 
               <!-- Details Arrow -->
-              <td class="text-right">
+              <td class="text-center">
                 <a href="#" class="text-gray-400 hover:text-white transition duration-200">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -155,13 +155,13 @@
 
               <!-- Availability Status -->
               <td class="text-right text-white">
-                <p class="font-semibold">Available</p>
+                <p class="font-semibold text-left">Available</p>
               </td>
 
               <!-- Details Arrow -->
-              <td class="text-right">
-                <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <td class="text-center">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-200 ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
