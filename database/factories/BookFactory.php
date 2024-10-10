@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Author;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,7 @@ class BookFactory extends Factory
     {
         return [
             'title' => fake()->words(3, true), //with true it returns it as a string, false as array
-            'author' => fake()->name(),
+            'author_id' => Author::factory(),
             'pages' => fake()->numberBetween(20, 1000),
             'cover' => fake()->imageUrl(),
             'blurb' => fake()->paragraphs(rand(1, 5), true), //with true it returns it as a string, false as array

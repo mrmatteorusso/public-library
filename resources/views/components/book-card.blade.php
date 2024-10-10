@@ -16,15 +16,18 @@
               </td>
 
               <!-- Author -->
-              <td class="text-white">{{$book->author}}</td>
+              <td class="text-white">{{$book->author->name}}</td>
 
               <!-- Pages -->
               <td class="text-white">{{$book->pages}}</td>
 
               <!-- Tags -->
               <td>
-                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">{{$book->pages}}</span>
-                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Classic</span>
+                  @foreach ($book->tags as $tag )
+
+                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">{{$tag->tag}}</span>
+                @endforeach
+                {{-- <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">{{$book->tags}}</span> --}}
               </td>
 
               <!-- Availability Status -->

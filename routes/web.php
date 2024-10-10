@@ -1,12 +1,15 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+// Route::get('/', function () {
 
-    $books = Book::all();
+//     $books = Book::all();
 
-    return view('books.index', ['books' => $books] );
-});
+//     return view('books.index', ['books' => $books] );
+// });
+
+Route::get('/', [BookController::class, 'index'] );
 
