@@ -9,7 +9,7 @@ class Tag extends Model
 {
     /** @use HasFactory<\Database\Factories\TagFactory> */
     use HasFactory;
-
+    protected $guarded = [];
     public function books()
     {
         return $this->belongsToMany(Book::class);

@@ -9,10 +9,10 @@ class Book extends Model
 {
     /** @use HasFactory<\Database\Factories\BookFactory> */
     use HasFactory;
-    protected $fillable = ['title', 'author', 'pages', 'blurb', 'tags', 'status', 'location', 'logo'];
-
+    // protected $fillable = ['title', 'author', 'pages', 'blurb', 'tags', 'status', 'location', 'logo'];
+    protected $guarded = [];
     public function author () {
-        return $this->belongsTo(Author::class);
+        return $this->belongsTo(Author::class, 'author_id');
     }
     public function tags()
     {

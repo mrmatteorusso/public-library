@@ -23,7 +23,7 @@ class BookFactory extends Factory
             'pages' => fake()->numberBetween(20, 1000),
             'cover' => fake()->imageUrl(),
             'blurb' => fake()->paragraphs(rand(1, 5), true), //with true it returns it as a string, false as array
-            'location' => fake()->city(),
+            'location' => fake()->city() ,
             'is_available' => true
 
 
