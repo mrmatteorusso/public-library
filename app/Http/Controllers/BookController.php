@@ -62,9 +62,58 @@ class BookController extends Controller
         return redirect('/books');
     }
 
-        public function destroy(Book $book) {
+    public function edit(Book $book)
+    {
+        return view('books.edit', ['book' => $book]);
+    }
+
+    public function update(Book $book, Request $request, Author $author)
+    {
+        // $author = Author::firstOrCreate(['name' => $request->author]);
+
+
+        $author->update([
+            'name' => $request->author,
+        ]);
+
+
+        $is_available = $request->has('is_available') ? 1 : 0;
+
+
+        $book->update(
+            [
+                'title' => request('title'),
+                'cover' => request('cover'),
+                'pages' => request('pages'),
+                'is_available' => $is_available,
+                'location' => request('location'),
+                'blurb' => request('blurb'),
+                'author_id' => $author->id,
+            ]
+        );
+
+        // Process the tags (assuming $request->tags is a comma-separated string)
+        $tags = explode(',', $request->tags); //array of strings
+        $tagIds = [];
+
+        foreach ($tags as $tagName) {
+            // Create or find each tag and collect its ID
+            $tag = Tag::firstOrCreate(['tag' => trim($tagName)]);
+            $tagIds[] = $tag->id;  // Store the tag ID
+        }
+
+        // Attach the tags to the book (sync replaces existing tags)
+        $book->tags()->sync($tagIds);
+
+
+
+
+        return redirect("/books/show/{$book->id}");
+    }
+
+    public function destroy(Book $book)
+    {
         $book->delete();
         return redirect('/books');
-
-        }
+    }
 }

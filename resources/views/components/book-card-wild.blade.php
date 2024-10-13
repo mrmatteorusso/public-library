@@ -39,7 +39,7 @@
     <div class="border-t-2 border-gray-300 my-6"></div>
 
     <div class="flex justify-between">
-        <a href="/books/create" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Edit</a>
+        <a href="/books/{{$book->id}}/edit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Edit</a>
         <a href="/books" class="text-blue-400 hover:underline">Back to list</a>
         <!-- Delete Form -->
         {{-- <form action="{{ route('books.destroy', $book->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this book?');"> --}}

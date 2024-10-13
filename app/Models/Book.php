@@ -18,5 +18,4 @@ class Book extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
-
 }

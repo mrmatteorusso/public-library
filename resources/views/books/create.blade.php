@@ -51,9 +51,6 @@
             <label for="blurb" class="block text-sm font-medium leading-6 text-gray-200">Blurb</label>
             <input id="blurb" name="blurb" type="text" class="mt-1 block w-full px-3 py-2 bg-gray-700 text-gray-100 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
         </div>
-
-
-
         <!-- Submit Button -->
         <div>
             <button class="w-full px-4 py-2 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500">
